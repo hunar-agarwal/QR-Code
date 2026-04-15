@@ -8,34 +8,22 @@
   </head>
   
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 3;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      
+   <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 2;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="card1" src="mita.jpeg"/>
-        <img id="card2" src="simple.jpg"/>
-        <img id="card3" src="hunar.png"/>
         <a-asset-item id="teddyModel" src="teddy.glb"></a-asset-item>
-        <a-video id="myVideo" src="timer.mp4" autoplay loop="true" muted playsinline webkit-playsinline></a-video>
         <a-asset-item id="penguinModel" src="Penguin.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-         <a-plane src="#card2" position="0 0 0" height="1" width="1"></a-plane>
-        <a-gltf-model id="teddy" look-at="[camera]" rotation="-270 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" src="#teddyModel"></a-gltf-model>
+        <a-gltf-model id="teddy" look-at="[camera]" rotation="0 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" src="#teddyModel"></a-gltf-model>
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane src="#card1" position="0 0 0" height="1" width="1"></a-plane>
-        <a-gltf-model id="penguin" look-at="[camera]" rotation="-270 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" src="#penguinModel"></a-gltf-model>
+        <a-gltf-model look-at="#teddy" rotation="0 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" src="#penguinModel"></a-gltf-model>
       </a-entity>
-
-      <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane src="#card3" position="0 0 0" height="1" width="1"></a-plane>
-        <a-video rotation="0 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" width="1" height="0.5625" src="#myVideo"></a-video>
-      </a-entity>
-      
     </a-scene>
+    
   </body>
 </html>
