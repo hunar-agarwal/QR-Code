@@ -10,7 +10,7 @@
     <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 2;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <a-asset-item id="teddyModel" src="teddy.glb"></a-asset-item>
-        <a-video id="myVideo" src="timer.mp4" autoplay loop muted playsinline webkit-playsinline></a-video>
+        <video id="myVideo" src="timer.mp4" autoplay loop muted playsinline webkit-playsinline></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -20,7 +20,7 @@
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1" play-on-target>
-        <a-video look-at="[camera]" rotation="0 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" width="1" height="0.5625" src="#myVideo"></a-video>
+        <a-video rotation="0 0 0" position="0 0 0.1" scale="0.9 0.9 0.9" width="1" height="0.5625" src="#myVideo" playsinline webkit-playsinline></a-video>
       </a-entity>
     </a-scene>
   </body>
